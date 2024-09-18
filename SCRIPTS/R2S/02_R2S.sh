@@ -4,6 +4,8 @@ clear
 ## Custom-made
 # GCC CFlags for R2S
 sed -i 's,-mcpu=generic,-march=armv8-a,g' include/target.mk
+git clone https://github.com/sirpdboy/autosamba package/autosamba
+git clone https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
 # Overclock or not
 rm -rf ./target/linux/rockchip/patches-5.15/991-arm64-dts-rockchip-add-more-cpu-operating-points-for.patch
 cp -f ../PATCH/overclock/999-rk3328-enable-1512mhz-and-minimum-at-816mhz.patch ./target/linux/rockchip/patches-5.15/991-arm64-dts-rockchip-add-more-cpu-operating-points-for.patch
